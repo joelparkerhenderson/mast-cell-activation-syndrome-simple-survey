@@ -16,6 +16,18 @@ This project uses Pure CSS. The HTML page has a link to the Cloudflare CDN.
 />
 ```
 
+This project includes Pure responsive grids:
+
+```html
+<link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/grids-responsive.min.css" 
+    integrity="sha512-5hr5fSxiYwkxK0EZX2B/DILA1QoyXwIf9ynWVbyMvqcMIDZ0XZKWw+xk9mysLSOLV4iMrBB1t/YAxt/006W4HA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+/>
+```
+
 ## JavaScript (JS)
 
 This project uses Alpine JS. The HTML page has a link to the Cloudflare CDN.
