@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <title>Mast Cell Activation Syndrome (MCAS) Simple Survey</title>
+		<meta charset="utf-8" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/pure-min.css" integrity="sha512-X2yGIVwg8zeG8N4xfsidr9MqIfIE8Yz1It+w2rhUJMqxUwvbVqC5OPcyRlPKYOw/bsdJut91//NO9rSbQZIPRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.0/cdn.min.js" integrity="sha512-4e/5PZ1eoLJMDjaJXTHkWRA0yec8bm07/iINYSd5rdJ38jGm5OZkEi3J+7LqSDWNATNJ4/aneNlrk2AYnnckIg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            @media screen and (min-width: 640px) {
+            .content {
+                max-width: 640px;
+                margin: 0 auto;/*Centering this container*/
+            }
+            }
+            body {
+                font-family:Arial,helvetica,sans-serif;
+                font-size:100%;
+                font-size:1em;
+              }
+        </style>
+    </head>
+	<body>
+        <div class="content">
+
+        <h1>Mast Cell Activation Syndrome (MCAS) Simple Survey</h1>
+
+        <p>
+            This is a survey on Mast Cell Activation Syndrome Symptoms. The higher your
+            score, the more likely you are to have Mast Cell Activation Syndrome. If you
+            have a score over 50, investigate whether you might have Mast Cell
+            Activation Syndrome.
+        </p>
+
+        <p>
+            The survey was developed by Beth O'Hara for their Master’s Thesis
+            and Doctoral Dissertation. This is based on the work of top experts
+            in the field and Dr. O'Hara's own clinical observations of thousands
+            of people with Mast Cell Activation Syndrome (Afrin L. B., 2016)
+            (Afrin L. B., 2013) (Akin, Valent, & Metcalfe, 2010) (Theoharis
+            C.Theoharides, et. al., 2012).
+        </p>
+
+
+        <p>
+            <b>What the options mean:</b>
+            <br>
+            <br><select><option>&#9734;&#9734;&#9734;&#9734;&#9734;</option></select> 0 means none
+            <br><select><option>&#9733;&#9734;&#9734;&#9734;&#9734;</option></select> 1 means very mild
+            <br><select><option>&#9733;&#9733;&#9734;&#9734;&#9734;</option></select> 2 means slightly bothersome
+            <br><select><option>&#9733;&#9733;&#9733;&#9734;&#9734;</option></select> 3 means moderate
+            <br><select><option>&#9733;&#9733;&#9733;&#9733;&#9734;</option></select> 4 means severe
+            <br><select><option>&#9733;&#9733;&#9733;&#9733;&#9733;</option></select> 5 means very severe
+        </p>
+
+        <p>
+            <b>Score your symptoms:</b>
+        </p>
+
+        <script>
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('survey', () => ({
+
+                    questions: [
+                        { id: `86f0b470f5aa00ebc88f7710ddf63031`, text: `Fatigue` },
+                        { id: `0e9a54dc60f3aa0636c39d3659ff6080`, text: `Sweats` },
+                        { id: `dab91c93b8526d29c8852c4504022963`, text: `Feeling cold` },
+                        { id: `4cd393bdc18416554291b5c6138df805`, text: `Flushing` },
+                        { id: `aff32b4e377c3df7e25eda3b5488f8b9`, text: `Weight gain` },
+                        { id: `bcd5de1bf008def002018f16402be06c`, text: `Weight loss` },
+                        { id: `1144c3842a385262aae2621deb3db07b`, text: `Appetite increase` },
+                        { id: `92d7dbf479786d69ae09405d821c3232`, text: `Appetite decrease` },
+                        { id: `366b0cded4a73c71fe1678888432138a`, text: `Rashes` },
+                        { id: `2327e5d3401154057a9ff8cf6aaa5610`, text: `Itching` },
+                        { id: `56f31310cc2181cc59abb1622ef18e99`, text: `Hair thinning/loss` },
+                        { id: `2794ce7f1fb0763642d917e3f413bc49`, text: `Irritated eyes` },
+                        { id: `27982a3babc9f53ec4e250fb0cd86835`, text: `Light sensitivity` },
+                        { id: `b0ccb12fe86db7863b11a7b3fad9e623`, text: `Tinnitus` },
+                        { id: `6746bd828728c3f5d9ce15efaae63030`, text: `Ear pain` },
+                        { id: `6fc2500eda74b58e6461ded7b646e6e2`, text: `Ear congestion` },
+                        { id: `3b6c6a159dc319d29bc1cc47666a3044`, text: `Mouth burning` },
+                        { id: `62369ef2ae06ea85728e911dba4c2082`, text: `Mouth sores` },
+                        { id: `1f1dbc36e7ff998ca9b0740b59cfeb0b`, text: `Dental decay` },
+                        { id: `67b9d23213a7dbf64fdef85dbca8dbd5`, text: `Allergies` },
+                        { id: `0a65c84d48140bdfd1988ca68c08f31f`, text: `Itchy throat` },
+                        { id: `c447a5f5bb7919fc4257b4bb95795af3`, text: `Sore throat` },
+                        { id: `2c8ea53e1e2f3a5741ea21a4081feec6`, text: `Post-nasal drip` },
+                        { id: `65ba06582ecf63748c83e234252471a4`, text: `Swollen lymph nodes` },
+                        { id: `cf64b3e774b90d8479ddd00cae5d5daf`, text: `Painful lymph nodes` },
+                        { id: `c562821517f339cd0f18b17b620f6394`, text: `Pain in left upper abdomen` },
+                        { id: `f81accb3a34247a48788c7ae0ea3e6ff`, text: `Swollen nasal passages` },
+                        { id: `e9f3de59c1136c51ee43e11bdea3dfd8`, text: `Swollen sinuses` },
+                        { id: `3315476b98906e389c7e8b5f0c7a1e45`, text: `Cough` },
+                        { id: `2c21e1faa6988b32341d697a5895dcc1`, text: `Trouble catching breath` },
+                        { id: `ff86441163ed1aad196e3bc1dcbcb9c6`, text: `Wheezing` },
+                        { id: `32253f99f88f5466fa782bea0e65e4ad`, text: `Sleep Apnea` },
+                        { id: `1f4b14e4fbcb1532b0055e65b33aa3d6`, text: `Dizziness` },
+                        { id: `fca88581e27d97e2b18de22e5473e9cf`, text: `Lightheadedness` },
+                        { id: `861762268546b2283382b8b324fe83bb`, text: `Weakness` },
+                        { id: `e82bdd85698295bd578fc5197ac8be6e`, text: `Vertigo` },
+                        { id: `3299fea0a1e33dd59264336bd68288c3`, text: `Fainting` },
+                        { id: `b10add9601c7f80bbba36c1adf55efaf`, text: `High blood pressure` },
+                        { id: `8d70571a6f1676b3d6f689591171d172`, text: `Low blood pressure` },
+                        { id: `4716feaa8b2901b034b74958655acd8d`, text: `Heart palpitations` },
+                        { id: `0cbafc5331b2bbc1ee53abd40b148b4c`, text: `Chest pain not from heart attack` },
+                        { id: `09b554afcc5223286b140a7a9dc324c2`, text: `Bloating or gas` },
+                        { id: `d769f06b35fe4b1571fe25455e855e71`, text: `Abdominal pain` },
+                        { id: `a4455ede5a61d2498eae160b5d4aa970`, text: `Queasiness` },
+                        { id: `a23a5290969da4b3d9937b86f9117bba`, text: `Nausea` },
+                        { id: `f006a7bcc9d0420f4e8b0e4a062ff806`, text: `Vomiting` },
+                        { id: `76e53c83ed5ee358b070056dd3910ab9`, text: `Diarrhea` },
+                        { id: `8f6fe55c51bdb6ee5ca25a4cfbddb64d`, text: `Constipation` },
+                        { id: `e82e14484c012470e7d6b9fb5bf7a1a6`, text: `Reflux` },
+                        { id: `09651e40d95935b3c8757799b01ca462`, text: `Pelvic pain` },
+                        { id: `bcafad2f7bd0c7719cef5f8f929148d3`, text: `Endometriosis (if you have/had a uterus)` },
+                        { id: `87b552ad584c46927d03207696d9cd82`, text: `Decreased libido` },
+                        { id: `68f5ce505a92fc50b1e823e8ad24ad71`, text: `Erectile dysfunction (if you have/had erections)` },
+                        { id: `db5e8e535eb8531098138d8f540e2d07`, text: `Muscle pain` },
+                        { id: `9379636e98ed1585bd6f64b8a9ea28c6`, text: `Arthritis` },
+                        { id: `76d057f15ecac57b5c9decf2b1f730e2`, text: `Joint hypermobility` },
+                        { id: `344ef3cfce3a3a07335f8ba24128b119`, text: `Osteoporosis / Osteopenia` },
+                        { id: `7c46541f9fbcd6865b711283867680f2`, text: `Headaches` },
+                        { id: `51e073d434d3e611cc2f6eccee9fbcf2`, text: `Tics` },
+                        { id: `01805653c5c6aeb4b6ab7d42eec26c5f`, text: `Tremors` },
+                        { id: `522822cf6cc6b732df1d7d18b788d0a6`, text: `Seizures` },
+                        { id: `391ef67e0eda336bb7418cbb6f5dbb84`, text: `Unexplained mood changes` },
+                        { id: `e94bc88997c44d14e7b99a465e19c67f`, text: `Anxiety` },
+                        { id: `1eddd044138017100f06d6e1836b4019`, text: `Panic` },
+                        { id: `e29b0533868561b6984d00ad6902e6a7`, text: `Depression` },
+                        { id: `7b091e15d062869e816a593159f1de86`, text: `Anger` },
+                        { id: `55836552a1ceb8c7fe6b2e60226f12ed`, text: `Psychosis` },
+                        { id: `4955058015e713f3d8dba428fb1c46a8`, text: `Memory issues` },
+                        { id: `53f8849515f9bfc2217f12cab275830f`, text: `Trouble concentrating` },
+                        { id: `510e2cc22848143a259ecb4ea89a9575`, text: `Difficulty finding words` },
+                        { id: `d873809bfc0be8496dbd0eb6a4dd2173`, text: `Painful periods (if you have/had periods)` },
+                        { id: `85f8192adeff5938fe7f696b03f3bfe2`, text: `Hypothyroidism` },
+                        { id: `05a71e5a71d96d8bfc9dd681d0d527c0`, text: `Hyperthyroidism` },
+                        { id: `4e40aa85b80d4f9b28bbe1394671a9b7`, text: `Easy bruising/bleeding` },
+                        { id: `fa8fe2842b3351781f22f2ee4ae5efaf`, text: `Slow healing` },
+                        { id: `5f1441757182d26ec9355e20eabad8b3`, text: `Get infections easily` },
+                        { id: `ce376cd4efda193264851b87ebbdc22f`, text: `Food sensitivities` },
+                        { id: `c6290f3b804a81d7293a0700a83fcb8c`, text: `Chemical sensitivities` },
+                    ],
+
+                    severityOptions: [
+                        { value: 0, text: `&#9734;&#9734;&#9734;&#9734;&#9734;` },
+                        { value: 1, text: `&#9733;&#9734;&#9734;&#9734;&#9734;` },
+                        { value: 2, text: `&#9733;&#9733;&#9734;&#9734;&#9734;` },
+                        { value: 3, text: `&#9733;&#9733;&#9733;&#9734;&#9734;` },
+                        { value: 4, text: `&#9733;&#9733;&#9733;&#9733;&#9734;` },
+                        { value: 5, text: `&#9733;&#9733;&#9733;&#9733;&#9733;` },
+                    ],
+
+                    score: 0,
+
+                    scorer() {
+                        let _score = 0;
+                        this.questions.forEach((question) => {
+                            let selectElement = document.getElementById(question.id);
+                            if (selectElement == null) { 
+                                console.debug('selectElement is null for question id:' + question.id);
+                                return 0;
+                            }
+                            let selectedOption = selectElement.options[selectElement.selectedIndex];
+                            if (selectedOption == null) { 
+                                console.debug('selectedOption is null for question id:' + question.id);
+                                return 0;
+                            }
+                            _score += parseInt(selectedOption.value);
+                        });
+                        this.score = _score;
+                        return _score;
+                    }
+
+                }))
+            })
+        </script>
+
+        <div x-data="survey">
+            <ul style="list-style-type: none; margin: 0; padding: 0;">
+                <template x-for="question in questions">
+                    <li>
+                        <label>
+                            <select :id="question.id" @change="scorer(); console.debug('select id:' + $event.target.id + ' value:' + $event.target.value + ' score:' + score);">
+                                <template x-for="option in severityOptions">
+                                    <option :key="option.value" :value="option.value" x-html="option.text"></option>
+                                </template>
+                            </select>
+                            <span x-text="question.text"></span>
+                        </label>
+                    </li>
+                </template>
+            </ul>
+
+            <p>
+                <b>Score: <span x-text="score"></span></b>
+            </p>
+        </div>
+
+    </body>
+
+</html>
