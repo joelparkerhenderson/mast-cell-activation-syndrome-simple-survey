@@ -6,4 +6,4 @@ or not. The higher your score, the more likely you are to have Mast Cell
 Activation Syndrome. If you have a score over 50, investigate whether you might
 have Mast Cell Activation Syndrome.
 
-<h3><a href="https://joelparkerhenderson.github.io/mast-cell-activation-syndrome-simple-survey/>Launch the survey</a></h3>
+<b><a href="https://joelparkerhenderson.github.io/mast-cell-activation-syndrome-simple-survey/>Launch the survey</a></b>
