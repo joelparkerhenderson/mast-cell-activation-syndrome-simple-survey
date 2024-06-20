@@ -2,9 +2,9 @@
 
 Technology notes about this project.
 
-## Cascading Style Sheets (CSS)
+## Pure Cascading Style Sheets (CSS)
 
-This project uses Pure CSS. The HTML page has a link to the Cloudflare CDN.
+This project uses Pure CSS like this:
 
 ```html
 <link
@@ -16,7 +16,7 @@ This project uses Pure CSS. The HTML page has a link to the Cloudflare CDN.
 />
 ```
 
-This project includes Pure responsive grids:
+This project use Pure responsive grids like this:
 
 ```html
 <link 
@@ -28,9 +28,23 @@ This project includes Pure responsive grids:
 />
 ```
 
-## JavaScript (JS)
+## FontAwesome icons
 
-This project uses Alpine JS. The HTML page has a link to the Cloudflare CDN.
+This project uses FontAwesome icons like this:
+
+```html
+<link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+/>
+```
+
+## Alpine JavaScript (JS)
+
+This project uses Alpine JS like this:
 
 ```html
 <script
