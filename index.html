@@ -200,26 +200,9 @@
                         ],
 
                         score: 0,
-
                         scorer() {
-                            let _score = 0;
-                            this.questions.forEach((question) => {
-                                let selectElement = document.getElementById(question.id);
-                                if (selectElement == null) { 
-                                    console.debug('selectElement is null for question id:' + question.id);
-                                    return 0;
-                                }
-                                let selectedOption = selectElement.options[selectElement.selectedIndex];
-                                if (selectedOption == null) { 
-                                    console.debug('selectedOption is null for question id:' + question.id);
-                                    return 0;
-                                }
-                                _score += parseInt(selectedOption.value);
-                            });
-                            this.score = _score;
-                            return _score;
+                            this.score = this.questions.reduce((a, x) => a += parseInt(document.getElementById(x.id).value), 0);
                         }
-
                     }))
                 })
             </script>
